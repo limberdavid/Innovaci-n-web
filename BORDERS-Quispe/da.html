@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Bordes CSS - Replicado</title>
+    <link rel="stylesheet" href="de.css"> 
+</head>
+<body>
+
+    <div class="container">
+        
+        <h2>1. Estilos de Border</h2>
+        <div class="example-group border-styles-grid">
+            <div class="style-box style-solid">
+                <span class="label">solid</span>
+                <span class="code">border: 5px solid #3498db;</span>
+            </div>
+            <div class="style-box style-dashed">
+                <span class="label">dashed</span>
+                <span class="code">border: 3px dashed #2ecc71;</span>
+            </div>
+            <div class="style-box style-dotted">
+                <span class="label">dotted</span>
+                <span class="code">border: 3px dotted #e74c3c;</span>
+            </div>
+            <div class="style-box style-double">
+                <span class="label">double</span>
+                <span class="code">border: 5px double #9b59b6;</span>
+            </div>
+            <div class="style-box style-groove">
+                <span class="label">groove</span>
+                <span class="code">border: 5px groove #34495e;</span>
+            </div>
+            <div class="style-box style-ridge">
+                <span class="label">ridge</span>
+                <span class="code">border: 5px ridge #1abc9c;</span>
+            </div>
+            <div class="style-box style-inset">
+                <span class="label">inset</span>
+                <span class="code">border: 5px inset #e67e22;</span>
+            </div>
+            <div class="style-box style-outset">
+                <span class="label">outset</span>
+                <span class="code">border: 5px outset #f39c12;</span>
+            </div>
+        </div>
+
+        ---
+
+        <h2>2. Bordes Individuales por Lado</h2>
+        <div class="example-group border-individual-grid">
+            <div class="individual-box individual-top">
+                <span class="label">Solo arriba</span>
+                <span class="code">border-top: 4px solid #3498db;</span>
+            </div>
+            <div class="individual-box individual-bottom">
+                <span class="label">Solo abajo</span>
+                <span class="code">border-bottom: 4px solid #2ecc71;</span>
+            </div>
+            <div class="individual-box individual-left">
+                <span class="label">Solo izquierda</span>
+                <span class="code">border-left: 4px solid #e74c3c;</span>
+            </div>
+            <div class="individual-box individual-multiple">
+                <span class="label">Múltiples lados</span>
+                <span class="code">border-top: 3px solid blue; <br> border-bottom: 3px solid red;</span>
+            </div>
+        </div>
+
+        ---
+
+        <h2>3. Border-Radius (Esquinas Redondeadas)</h2>
+        <div class="example-group radius-grid">
+            <div class="radius-box radius-small">
+                <span class="label">Pequeño</span>
+                <span class="code">border-radius: 5px;</span>
+            </div>
+            <div class="radius-box radius-medium">
+                <span class="label">Mediano</span>
+                <span class="code">border-radius: 15px;</span>
+            </div>
+            <div class="radius-box radius-large">
+                <span class="label">Grande</span>
+                <span class="code">border-radius: 30px;</span>
+            </div>
+            <div class="radius-box radius-pill">
+                <span class="label">Pill (Pastilla)</span>
+                <span class="code">border-radius: 999px;</span>
+            </div>
+        </div>
+
+        ---
+        
+        <h2>4. Creando Formas</h2>
+        <div class="example-group shapes-grid">
+            <div class="shape-container">
+                <div class="shape shape-circle"></div>
+                <span class="label">Círculo</span>
+                <span class="code">border-radius: 50%;</span>
+            </div>
+            <div class="shape-container">
+                <div class="shape shape-rounded-square"></div>
+                <span class="label">Cuadrado Redondeado</span>
+                <span class="code">border-radius: 30px;</span>
+            </div>
+            <div class="shape-container">
+                <div class="shape shape-top-rounded"></div>
+                <span class="label">Top Redondeado</span>
+                <span class="code">border-radius: 50% 50% 0 0;</span>
+            </div>
+            <div class="shape-container">
+                <div class="shape shape-leaf"></div>
+                <span class="label">Hoja</span>
+                <span class="code">border-radius: 0 100% 0 100%;</span>
+            </div>
+        </div>
+
+        ---
+
+        <h2>5. Botones con Diferentes Estilos de Borde</h2>
+        <div class="example-group buttons-section">
+            <div class="button-category">
+                <h3>Botones Sólidos</h3>
+                <div class="buttons-row">
+                    <a href="#" class="btn btn-filled">Filled</a>
+                    <a href="#" class="btn btn-outline">Outline</a>
+                    <a href="#" class="btn btn-ghost">Ghost</a>
+                </div>
+            </div>
+            <div class="button-category">
+                <h3>Botones con Efectos</h3>
+                <div class="buttons-row">
+                    <a href="#" class="btn btn-effect-grow">Border Grow</a>
+                    <a href="#" class="btn btn-effect-spin">Border Spin</a>
+                    <a href="#" class="btn btn-effect-slide">Slide Border</a>
+                </div>
+            </div>
+        </div>
+
+        ---
+
+        <h2>6. Cards con Estilos de Borde</h2>
+        <div class="example-group card-container">
+            <div class="card card-simple">
+                <h3>Card Simple</h3>
+                <span class="code">border: 1px solid #0e0e0e;<br>border-radius: 8px;</span>
+            </div>
+            <div class="card card-thick-border">
+                <h3>Card con Borde Grueso</h3>
+                <span class="code">border: 3px solid #3498db;<br>border-radius: 12px;</span>
+            </div>
+            <div class="card card-accent">
+                <h3>Card con Acento</h3>
+                <span class="code">border-left: 5px solid #2ecc71;<br>border-radius: 4px;</span>
+            </div>
+            <div class="card card-dotted-border">
+                <h3>Card con Borde Punteado</h3>
+                <span class="code">border: 2px dashed #9b59b6;<br>border-radius: 10px;</span>
+            </div>
+        </div>
+
+        ---
+
+        <h2>7. Avatares y Badges</h2>
+        <div class="example-group avatar-container">
+            <div class="avatar-item">
+                <img src="https://via.placeholder.com/80/3498db/FFFFFF?text=P1" alt="Avatar Circular" class="avatar avatar-circular">
+                <span class="label">Circular</span>
+            </div>
+            <div class="avatar-item">
+                <img src="https://via.placeholder.com/80/e74c3c/FFFFFF?text=P2" alt="Avatar Redondeado" class="avatar avatar-rounded">
+                <span class="label">Redondeado</span>
+            </div>
+            <div class="avatar-item">
+                <img src="https://via.placeholder.com/80/9b59b6/FFFFFF?text=P3" alt="Avatar Cuadrado" class="avatar avatar-square-img">
+                <span class="label">Cuadrado</span>
+            </div>
+        </div>
+
+        ---
+
+        <h2>8. Efectos Avanzados con Bordes</h2>
+        <div class="example-group advanced-effects-grid">
+            <div class="effect-box effect-gradient-border">
+                <span class="label">Border con Gradiente</span>
+                <span class="code">Usando background y padding</span>
+            </div>
+            <div class="effect-box effect-glow-border">
+                <span class="label">Border con Glow</span>
+                <span class="code">Usando box-shadow</span>
+            </div>
+            <div class="effect-box effect-animated-border">
+                <span class="label">Border Animado</span>
+                <span class="code">Transición en hover</span>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
