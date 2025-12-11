@@ -1,0 +1,342 @@
+/* --- RESET GLOBAL (Buena Práctica - Punto 5) --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* --- Estilos Generales y Vinos (Mantenidos) --- */
+body {
+    font-family: 'Georgia', serif; 
+    margin: 0;
+    background-color: #f7f3f1; 
+    color: #333;
+}
+
+:root {
+    --color-principal: #800020; 
+    --color-acento: #daa520; 
+    --color-fondo-tarjeta: #ffffff;
+    --color-texto-oscuro: #2c3e50;
+    
+    /* Colores para la sección de BOX-SIZING */
+    --box-bg: #1e1e2d; /* Fondo oscuro */
+    --box-text: #e0e0e0;
+    --box-card-bg: #292941; /* Fondo de tarjeta oscura */
+    --box-red: #c0392b;
+    --box-green: #27ae60;
+}
+
+/* Encabezado Superior */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+/* ... (Resto de estilos de header, banner, y grid-container, sin cambios) ... */
+.logo-title {
+    font-size: 1.8em;
+    color: var(--color-principal);
+    margin: 0;
+    font-weight: normal;
+}
+.top-nav a {
+    color: var(--color-texto-oscuro);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.top-nav a:hover {
+    color: var(--color-acento);
+}
+.main-banner {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #922b3e; 
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.main-banner h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.main-banner p {
+    font-size: 1.1em;
+    color: #f7e9e9;
+    margin-bottom: 30px;
+}
+.btn-ofertas {
+    background-color: var(--color-acento); 
+    color: var(--color-texto-oscuro);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.btn-ofertas:hover {
+    background-color: #ffc107;
+}
+.destacados-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f7f3f1; 
+}
+.destacados-intro h2 {
+    font-size: 2em;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 10px;
+}
+.destacados-intro p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 40px;
+}
+.grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.item-card {
+    background-color: var(--color-fondo-tarjeta);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.product-name {
+    margin: 15px 0 5px 0;
+    font-size: 1.3em;
+    color: var(--color-texto-oscuro);
+}
+.product-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+.product-price {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--color-principal); 
+    margin-bottom: 20px;
+}
+.btn-details {
+    background-color: var(--color-principal); 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+.btn-details:hover {
+    background-color: #a51d42; 
+}
+.placeholder-image {
+    width: 100%;
+    height: 250px; 
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-size: contain; 
+    background-position: bottom center; 
+    background-repeat: no-repeat;
+    background-color: #f7f7f7; 
+    border: 1px solid #e0e0e0;
+}
+.tinto-reserva {
+    background-image: url('vino.JPG'); 
+}
+.blanco-premium {
+    background-image: url('UVA.JPG'); 
+}
+.espumoso-rosado {
+    background-image: url('ALMA.JPG'); 
+}
+/* Media Query para hacerlo responsivo (Mantenido) */
+@media (max-width: 900px) {
+    .grid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .item-card {
+        width: 80%; 
+        max-width: 350px;
+    }
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .top-nav {
+        margin-top: 15px;
+    }
+    .top-nav a {
+        margin: 0 10px;
+    }
+}
+
+
+/* --- NUEVA SECCIÓN: Estilos BOX-SIZING (Puntos 1 al 5) --- */
+
+.box-sizing-explanation {
+    background-color: var(--box-bg); 
+    color: var(--box-text);
+    padding: 40px 10%;
+    margin-top: 40px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    font-size: 1.2em;
+    text-align: center;
+    color: #999;
+    margin-bottom: 40px;
+}
+
+.box-point {
+    background-color: var(--box-card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.point-title {
+    font-size: 1.4em;
+    color: white;
+    border-bottom: 2px solid #3d3d52;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.box-point p {
+    color: var(--box-text);
+}
+
+/* Estilo para el Placeholder de Imagen (Punto 1) */
+.image-placeholder.unavailable {
+    background-color: #4a4a6b;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 50px 0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+/* Estilos de Comparación (Punto 2) */
+.comparison-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+}
+
+.comparison-card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.comparison-card h4 {
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+.content-box-example {
+    background-color: var(--box-red);
+}
+
+.border-box-example {
+    background-color: var(--box-green);
+}
+
+/* Estilos de Demo (Punto 3) */
+.demo-box-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px 0;
+}
+
+.demo-box {
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.demo-box.red {
+    background-color: var(--box-red);
+    /* Simula content-box, el padding y borde salen */
+    border: 5px solid #ff5555; 
+}
+
+.demo-box.green {
+    background-color: var(--box-green);
+    /* Simula border-box, el padding y borde están dentro del ancho */
+    border: 5px solid #55ff55;
+    box-sizing: border-box; 
+}
+
+/* Estilos de Aplicación Real (Punto 4) */
+.grid-container.real-application {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #33334c; /* Fondo para contrastar la aplicación real */
+    border-radius: 6px;
+}
+.item-card-mini {
+    background-color: var(--box-card-bg);
+    border: 2px solid #555566;
+    border-radius: 6px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    color: var(--box-text);
+}
+.item-card-mini p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+.mini-price {
+    font-weight: bold;
+    color: var(--color-acento);
+    font-size: 1.1em;
+}
+
+/* Estilos de Código (Punto 5) */
+.box-point pre {
+    background-color: #11111a;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.box-point code {
+    color: #4cd137; /* Color verde neón para el código */
+    font-family: 'Consolas', monospace;
+}

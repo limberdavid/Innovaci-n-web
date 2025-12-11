@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Vinos Exclusivos</title>
+    <link rel="stylesheet" href="de.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1 class="logo-title">🍷 Vinos Exclusivos</h1>
+        <nav class="top-nav">
+            <a href="#">Bodegas</a>
+            <a href="#">Cosechas</a>
+            <a href="#">Club de Cata</a>
+        </nav>
+    </header>
+
+    <div class="main-banner">
+        <h2>La Selección de los Mejores Vinos del Mundo</h2>
+        <p>Encuentra cosechas limitadas y botellas galardonadas.</p>
+        <button class="btn-ofertas">Ver Selección de Bodegas</button>
+    </div>
+
+    <section class="destacados-section">
+        <div class="destacados-intro">
+            <h2>Cosechas Destacadas</h2>
+            <p>Nuestros ejemplares más valorados por expertos sommeliers.</p>
+        </div>
+        
+        <main class="grid-container">
+            <div class="item-card">
+                <div class="placeholder-image tinto-reserva"></div>
+                <h3 class="product-name">Cabernet Sauvignon 2018</h3>
+                <p class="product-description">Gran Reserva. Notas a cereza y roble francés.</p>
+                <div class="product-price">$99.50</div>
+                <button class="btn-details">Comprar</button>
+            </div>
+
+            <div class="item-card">
+                <div class="placeholder-image blanco-premium"></div>
+                <h3 class="product-name">Chardonnay Añejo</h3>
+                <p class="product-description">Cuerpo sedoso y ligero. Ideal para mariscos.</p>
+                <div class="product-price">$45.99</div>
+                <button class="btn-details">Comprar</button>
+            </div>
+
+            <div class="item-card">
+                <div class="placeholder-image espumoso-rosado"></div>
+                <h3 class="product-name">Espumoso Rosé Brut</h3>
+                <p class="product-description">Perfecto para celebraciones especiales.</p>
+                <div class="product-price">$32.00</div>
+                <button class="btn-details">Comprar</button>
+            </div>
+        </main>
+    </section>
+    
+    <section class="box-sizing-explanation">
+        <h2 class="section-title">Fig. BOX-SIZING</h2>
+        <p class="section-subtitle">VinoStore & el Modelo de Caja</p>
+
+        <div class="box-point">
+            <h3 class="point-title">1. ¿Cómo se aplica el modelo de caja en nuestra tienda?</h3>
+            <p>Cada botella de vino en VinoStore es una caja que utiliza <code>box-sizing: border-box;</code> para que el ancho sea predecible al agregar padding o borde.</p>
+            <div class="image-placeholder unavailable">La imagen que solicitas no existe o ya no está disponible.</div>
+        </div>
+        
+        <div class="box-point">
+            <h3 class="point-title">2. Comparación aplicada: content-box vs border-box</h3>
+            <div class="comparison-grid">
+                <div class="comparison-card content-box-example">
+                    <h4>❌ Tarjeta con content-box (por defecto)</h4>
+                    <p>El ancho aumenta si sale el padding y border.</p>
+                </div>
+                <div class="comparison-card border-box-example">
+                    <h4>✅ Tarjeta con border-box (como usamos en la tienda)</h4>
+                    <p>El ancho se mantiene estable (El ancho real se mantiene).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-point">
+            <h3 class="point-title">3. Demo interactiva (conceptual)</h3>
+            <div class="demo-box-container">
+                <div class="demo-box red">content-box</div>
+                <div class="demo-box green">border-box</div>
+            </div>
+        </div>
+
+        <div class="box-point">
+            <h3 class="point-title">4. Aplicación real: catálogo de VinoStore</h3>
+            <div class="grid-container real-application">
+                <div class="item-card-mini">
+                    <p>Gran Reserva</p>
+                    <p class="mini-price">$99.50</p>
+                </div>
+                <div class="item-card-mini">
+                    <p>Chardonnay</p>
+                    <p class="mini-price">$45.99</p>
+                </div>
+                <div class="item-card-mini">
+                    <p>Rosé Brut</p>
+                    <p class="mini-price">$32.00</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="box-point">
+            <h3 class="point-title">5. Buena práctica usada en VinoStore</h3>
+            <pre><code>
+/* Reset del modelo de caja para toda la tienda */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+            </code></pre>
+            <p>Con esto, aseguramos que los layouts mantengan el ajuste al agregar padding o borde.</p>
+        </div>
+        
+    </section>
+
+</body>
+</html>
